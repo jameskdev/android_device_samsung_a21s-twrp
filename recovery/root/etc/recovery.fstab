@@ -1,0 +1,23 @@
+# mount point       fstype          device                                                          flags
+system              /system         ext4                                                            ro,barrier=1                       wait,logical,first_stage_mount
+vendor              /vendor         ext4                                                            ro,barrier=1                       wait,logical,first_stage_mount
+product             /product        ext4                                                            ro                                 wait,logical,first_stage_mount
+odm                 /odm            ext4                                                            ro                                 wait,logical,first_stage_mount
+
+/boot               emmc           /dev/block/by-name/boot                                          flags=display="Boot";backup=1;flashimg=1;
+/recovery           emmc           /dev/block/by-name/recovery                                      flags=display="Recovery";backup=1;flashimg=1;
+/metadata           ext4           /dev/block/by-name/metadata                                      flags=display="Metadata";backup=1;
+/data               f2fs           /dev/block/by-name/userdata                                      flags=display="Data";
+/cache              ext4           /dev/block/by-name/cache                                         flags=display="Cache";
+/sdcard1            sdfat          /dev/block/mmcblk0p1                                             flags=display="Sdcard1";
+/efs                ext4           /dev/block/by-name/efs                                           flags=display="EFS";backup=1;
+/sec_efs            ext4           /dev/block/by-name/sec_efs                                       flags=display="Samsung EFS";backup=1;
+/cpefs              ext4           /dev/block/by-name/cpefs                                         flags=display="CPEFS";backup=1;
+/modem              emmc           /dev/block/by-name/radio                                         flags=display="Modem";
+/misc               emmc           /dev/block/by-name/misc                                          flags=display="Misc";backup=1;flashimg=1;
+/keydata            ext4           /dev/block/by-name/keydata                                       flags=display="Keydata";
+/keyrefuge          ext4           /dev/block/by-name/keyrefuge                                     flags=display="Keyrefuge";
+/dtbo               emmc           /dev/block/by-name/dtbo                                          flags=display="Dtbo";backup=1;flashimg=1;
+/prism              ext4           /dev/block/by-name/prism                                         flags=display="Prism";
+/vbmeta             emmc           /dev/block/by-name/vbmeta                                        flags=display="Vbmeta";backup=1;
+/vbmeta_samsung     emmc           /dev/block/by-name/vbmeta_samsung                                flags=display="Vbmeta_samsung";backup=1;
