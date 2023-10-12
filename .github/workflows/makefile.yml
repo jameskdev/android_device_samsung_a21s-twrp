@@ -18,7 +18,7 @@ jobs:
       run: |
 
     - name: Install dependencies
-      run: make
+      run: |
 
     - name: Run check
       run: |
