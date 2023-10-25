@@ -1,0 +1,27 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "android-12.1" ]
+  pull_request:
+    branches: [ "android-12.1" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: configure
+      run: |
+
+    - name: Install dependencies
+      run: |
+
+    - name: Run check
+      run: |
+
+    - name: Run distcheck
+      run: |
